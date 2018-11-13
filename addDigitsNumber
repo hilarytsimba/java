@@ -1,0 +1,15 @@
+    public static void main(String[] args) {
+        System.out.println("Who Dares Wins");
+     
+        int num = 999999999;
+        int sum = 0;
+        while(num > 10){
+            int n = num % 10;
+            int d = num /10;
+            sum = n + d;
+            num = sum;
+        }
+       
+        System.out.println(num);
+    }
+}
