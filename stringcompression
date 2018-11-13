@@ -1,0 +1,39 @@
+public class NewMain {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Working");
+        String a = "aabcccccaaac"; 
+
+        StringBuilder output = new StringBuilder();
+        int start = 0;
+        boolean end = false ;
+
+        while(!end){
+         
+          int reps = count(a.substring(start,a.length()));
+          char repsc = (char)(reps + 49);
+          output.append(a.charAt(start));
+          output.append(repsc);
+          
+          start = start + reps + 1;
+          
+          if (start>a.length()-1)
+              end =  true;
+        } 
+        System.out.println(output);
+    }
+    
+    private static int count(String a){
+        //don't go out of bounds
+        //aabcccccaaacc
+        for(int index = 0; index<a.length()-1;index++)
+            //if index == 
+            if (a.charAt(index) != a.charAt(index +1))
+                return index;
+          
+        return a.length()-1;
+    }
+}
